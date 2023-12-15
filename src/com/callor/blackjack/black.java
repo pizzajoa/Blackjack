@@ -18,9 +18,9 @@ public class black {
 		String player = scan.nextLine();
 
 		while (player.equals("h")) { // 17이하일때만 h누르기
-			int hit = (int) (Math.random() * 10) + 1;
-			playerTotal += hit;
-			System.out.println(hit + "점을 얻었습니다." + " 총 점수는 " + playerTotal);
+			int pHit = (int) (Math.random() * 10) + 1;
+			playerTotal += pHit;
+			System.out.println(pHit + "점을 얻었습니다." + " 총 점수는 " + playerTotal);
 			if (playerTotal > 21) {
 				System.out.println("파산! " + count + " 회 시도");
 				break;
@@ -35,9 +35,9 @@ public class black {
 		System.out.println("\n딜러의 점수는: " + dealerTotal + "점");
 
 		while (dealerTotal < 17) { // 딜러도 21안넘게끔 룰대로 17이하때만 뽑게 설정
-			int hit = (int) (Math.random() * 10) + 1;
-			dealerTotal += hit;
-			System.out.println(hit + "점을 얻었습니다." + " 총 점수는 " + dealerTotal);
+			int dHit = (int) (Math.random() * 10) + 1;
+			dealerTotal += dHit;
+			System.out.println(dHit + "점을 얻었습니다." + " 총 점수는 " + dealerTotal);
 		}
 
 		// 승자결정
