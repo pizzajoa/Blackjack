@@ -42,16 +42,19 @@ public class black {
 
 		// 승자결정
 		if (dealerTotal > 21) { // 플레이어, 딜러 21넘김 = 무승부
-			System.out.println("딜러 파산! 무승부입니다! " + count + " 회 시도");
+			System.out.println("파산! 무승부입니다! " + count + " 회 시도");
 			System.out.println("플레이어 : " + playerTotal + " 딜러 : " + dealerTotal);
 		} else if (dealerTotal > playerTotal) { // 딜러 21못넘기고 플레이어보다 점수 높음 = 딜러 승
 			System.out.println("딜러가 이겼습니다! " + count + " 회 시도");
+			System.out.println("플레이어 : " + playerTotal + " 딜러 : " + dealerTotal);
+		} else if (dealerTotal == playerTotal) { // 딜러 21못넘기고 플레이어와 딜러가 동점 = 무승부
+			System.out.println("동점! 무승부입니다! " + count + " 회 시도");
 			System.out.println("플레이어 : " + playerTotal + " 딜러 : " + dealerTotal);
 		} else if (playerTotal > 21) { // 딜러 21못넘기고 플레이어보다 점수가 높지않고 플레이어가 21보다 높음(파산패) = 딜러 승
 			System.out.println("딜러가 이겼습니다! " + count + " 회 시도");
 			System.out.println("플레이어 : " + playerTotal + " 딜러 : " + dealerTotal);
 		} else { // 딜러21못넘기고 플레이어보다 점수가 높지 않고 플레이어가 21보다 높지 않다 = 플레이어 승
-			System.out.println(" 당신이 이겼습니다! " + count + " 회 시도");
+			System.out.println("당신이 이겼습니다! " + count + " 회 시도");
 			System.out.println("플레이어 : " + playerTotal + " 딜러 : " + dealerTotal);
 		}
 		scan.close();
